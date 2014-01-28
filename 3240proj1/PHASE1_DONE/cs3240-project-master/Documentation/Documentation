@@ -1,0 +1,33 @@
+Documentation
+
+In this project, our group has 8 major classes 
+and 1 test-case class and 1 driver class.
+
+Major Classes:
+- NFA
+- NFAState
+- DFA
+- DFAState
+- TableWalker
+- RegexParser
+- RegexParserOutput
+- RegexParserInput
+
+
+Firstly, we generate individual NFA state by using RegexParser.We apply Union, 
+Concatenate, Star rules coorspondingly when we comibie other NFAs.
+
+Secondly, we parsed all small NFA states, we join the all of them into a big NFA
+table. RegexParserInput is used for parse NFAs and RegexParserOutput is used
+to create NFAs. After that, we convert the NFA and its NFA states to the DFA table
+and DFA states using DFA and DFAState classes.
+
+In each NFAState and DFAState class, we records the next reachable states that 
+can be traversed by list of transitions, also identifies itself as final(acceptin)
+state or not. Just want to point out here, Epsilon transition is proper handled 
+for NFA.
+
+Lastly, the tableWalker is used to do lexical analysis and to identify Token type.
+
+
+We have attached a UML diagram as well.
